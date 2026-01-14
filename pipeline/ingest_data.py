@@ -55,7 +55,7 @@ def run():
 
     first = True
 
-    for df_chunk in df_iter:
+    for df_chunk in tqdm(df_iter):
 
         if first:
             # Create table schema (no data)

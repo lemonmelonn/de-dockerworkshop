@@ -24,8 +24,8 @@ RUN uv sync --locked
 
 # Copy the application source code into the container
 # This is done after dependency installation to avoid unnecessary rebuilds
-COPY pipeline.py .
+COPY ingest_data.py .
 
 # Define the command that runs when the container starts
 # This executes pipeline.py using the virtual environment's Python interpreter
-ENTRYPOINT ["python", "pipeline.py"]
+ENTRYPOINT ["python", "ingest_data.py"]
